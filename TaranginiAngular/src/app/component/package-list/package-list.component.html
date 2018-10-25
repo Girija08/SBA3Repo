@@ -1,0 +1,21 @@
+<div class="container mt-5">
+  <h2 class="mb-5 ml-5">
+    <fa name="users"></fa>ISP Package List
+  </h2>
+
+  <div class="row" *ngIf="ispPack && ispPack.length>0">
+    <div class="col-lg-2 ml-1 mb-1" *ngFor="let c of ispPack">
+      <div class="card">
+        <div class="card-body">
+          <h6 class="card-title">{{c.title}}</h6>
+          <p class="card-text">
+            Speed:{{c.speed}}
+            <br /> Max usage:{{c.max}}
+            <br /> Price:{{c.price}}
+          </p>
+        </div>
+        <a routerLink="/addCustomer" class="btn" routerLink="/addCustomer/{{c.title}}">Apply</a>
+      </div>
+    </div>
+  </div>
+</div>
